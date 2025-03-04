@@ -1,14 +1,10 @@
-# Repository
+# Autoware with rmw_zenoh
 
-TODO: Remember to update the following files for your onwn needs
-
-* `.pre-commit-config.yaml`
-* `.gitignore`
-* `.github`: CI related
+Show how to run Autoware with rmw_zenoh.
 
 ## Usage
 
-* Install prerequisite.sh
+* Install prerequisites
 
 ```shell
 ./prerequisite.sh
@@ -19,3 +15,7 @@ TODO: Remember to update the following files for your onwn needs
 ```shell
 pre-commit install --install-hooks
 ```
+
+* TODO: Build Autoware
+
+* TODO: Run Autoware
