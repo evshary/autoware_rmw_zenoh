@@ -16,6 +16,20 @@ Show how to run Autoware with rmw_zenoh.
 pre-commit install --install-hooks
 ```
 
-* TODO: Build Autoware
+* Build Autoware
+  * Refer to [the official tutorial](https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/)
 
-* TODO: Run Autoware
+```shell
+./build_autoware.sh
+```
+
+* Run Autoware
+
+```shell
+# Run Zenohd first
+./run_zenohd.sh
+# Run Autoware
+./run_autoware.sh
+# Run Rviz
+./run_rviz2.sh
+```
