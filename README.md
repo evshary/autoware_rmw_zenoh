@@ -33,3 +33,12 @@ pre-commit install --install-hooks
 # Run Rviz
 ./run_rviz2.sh
 ```
+
+* Run test
+
+```shell
+# Run Zenohd first
+./run_zenohd.sh
+# Run the test
+./run_test.sh
+```

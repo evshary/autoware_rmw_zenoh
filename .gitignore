@@ -1,5 +1,6 @@
 # Autoware
 autoware
+*.log
 
 # Rust
 target
