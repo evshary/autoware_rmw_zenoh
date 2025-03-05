@@ -2,8 +2,8 @@
 
 set -e
 
-sudo apt install shellcheck pipx
+sudo apt install -y shellcheck pipx
 pipx install ruff
 pipx install pre-commit
 
-sudo apt install ros-humble-rmw-zenoh-cpp
+sudo apt install -y ros-humble-rmw-zenoh-cpp

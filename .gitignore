@@ -17,3 +17,6 @@ __pycache__
 install
 build
 log
+
+# Zenoh
+zenoh_log
