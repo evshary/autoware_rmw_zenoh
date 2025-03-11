@@ -29,6 +29,12 @@ pre-commit install --install-hooks
 ./build_autoware.sh
 ```
 
+* Build rmw_zenoh
+
+```shell
+./build_zenoh.sh
+```
+
 * Run Autoware
 
 ```shell
