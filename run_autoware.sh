@@ -12,6 +12,7 @@ fi
 
 source /opt/ros/humble/setup.bash
 source autoware/install/setup.bash
+source rmw_zenoh/install/setup.bash
 RUST_LOG=z=debug ros2 launch autoware_launch planning_simulator.launch.xml \
         map_path:="$HOME"/autoware_map/sample-map-planning \
         vehicle_model:=sample_vehicle \
