@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+#export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
 LOG_PATH=zenoh_log/autoware/$(date '+%Y-%m-%d_%H:%M:%S')/
 mkdir -p "${LOG_PATH}"

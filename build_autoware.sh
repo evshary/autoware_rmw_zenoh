@@ -8,9 +8,12 @@ if [ ! -d "autoware" ]; then
     mkdir src
     vcs import src < autoware.repos
     rosdep update
-    rosdep install -y --from-paths src --ignore-src --rosdistro "$ROS_DISTRO"
+    rosdep install -r -y --from-paths src --ignore-src --rosdistro "$ROS_DISTRO"
     cd .. || exit
 fi
 
 cd autoware || exit
+# Default build
 colcon build --symlink-install
+# Release build
+#colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
