@@ -12,7 +12,13 @@ if [ ! -d "autoware" ]; then
     rosdep install -r -y --from-paths src --ignore-src --rosdistro "$ROS_DISTRO"
     cd .. || exit
 
-    # Apply composable node thread limit patch
+    # This patch runs behavior_path_planner in a separate container with one thread
+    # to avoid a GuardCondition use-after-free issue when using rmw_zenoh with multi-threaded executor.
+    # Known issue in ROS 2 Humble; fixed in Rolling (2025.04+), not backported.
+    #
+    # Related issues:
+    # - https://github.com/ros2/rmw_zenoh/issues/608
+    # - https://github.com/ros2/rclcpp/issues/2820
     cd autoware/src/universe/autoware.universe || exit
     git apply ../../../../patch/thread_limit.patch
     cd ../../.. || exit
