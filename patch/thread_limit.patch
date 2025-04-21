@@ -1,24 +1,28 @@
 diff --git a/launch/tier4_planning_launch/launch/scenario_planning/lane_driving/behavior_planning/behavior_planning.launch.xml b/launch/tier4_planning_launch/launch/scenario_planning/lane_driving/behavior_planning/behavior_planning.launch.xml
-index 3579884064..47fdda6e1c 100644
+index 1cc1411f8..e5ac7e87a 100644
 --- a/launch/tier4_planning_launch/launch/scenario_planning/lane_driving/behavior_planning/behavior_planning.launch.xml
 +++ b/launch/tier4_planning_launch/launch/scenario_planning/lane_driving/behavior_planning/behavior_planning.launch.xml
-@@ -169,7 +169,7 @@
-   />
-   <let name="behavior_velocity_planner_launch_modules" value="$(eval &quot;'$(var behavior_velocity_planner_launch_modules)' + '$(var launch_module_list_end)'&quot;)"/>
-
--  <node_container pkg="rclcpp_components" exec="$(var container_type)" name="behavior_planning_container" namespace="" args="" output="both">
-+  <node_container pkg="rclcpp_components" exec="$(var container_type)" name="behavior_planning_container2" namespace="" args="" output="both">
-     <composable_node pkg="autoware_behavior_path_planner" plugin="autoware::behavior_path_planner::BehaviorPathPlannerNode" name="behavior_path_planner" namespace="">
-       <!-- topic remap -->
-       <remap from="~/input/route" to="$(var input_route_topic_name)"/>
-@@ -207,7 +207,10 @@
-       <!-- composable node config -->
-       <extra_arg name="use_intra_process_comms" value="false"/>
-     </composable_node>
-+    <param name="thread_num" value="1" />
-+  </node_container>
-
-+  <node_container pkg="rclcpp_components" exec="$(var container_type)" name="behavior_planning_container" namespace="" args="" output="both">
-     <composable_node pkg="autoware_behavior_velocity_planner" plugin="autoware::behavior_velocity_planner::BehaviorVelocityPlannerNode" name="behavior_velocity_planner" namespace="">
-       <!-- topic remap -->
-       <remap from="~/input/path_with_lane_id" to="path_with_lane_id"/>
+@@ -220,7 +220,7 @@
+   </node_container>
+ 
+   <group if="$(eval &quot;'$(var behavior_path_planner_type)' == 'behavior_path_planner'&quot;)">
+-    <load_composable_node target="/planning/scenario_planning/lane_driving/behavior_planning/behavior_planning_container">
++    <node_container pkg="rclcpp_components" exec="$(var container_type)" name="behavior_planning_container2" namespace="" args="" output="both">
+       <composable_node pkg="autoware_behavior_path_planner" plugin="autoware::behavior_path_planner::BehaviorPathPlannerNode" name="behavior_path_planner" namespace="">
+         <remap from="~/input/route" to="$(var input_route_topic_name)"/>
+         <remap from="~/input/vector_map" to="$(var input_vector_map_topic_name)"/>
+@@ -253,11 +253,12 @@
+         <param from="$(var behavior_path_planner_sampling_planner_module_param_path)"/>
+         <param from="$(var behavior_path_planner_drivable_area_expansion_param_path)"/>
+         <param from="$(var behavior_path_planner_scene_module_manager_param_path)"/>
+-        <param from="$(var behavior_path_planner_common_param_path)"/>
++	<param from="$(var behavior_path_planner_common_param_path)"/>
+         <!-- composable node config -->
+         <extra_arg name="use_intra_process_comms" value="false"/>
+       </composable_node>
+-    </load_composable_node>
++      <param name="thread_num" value="1"/>
++    </node_container>
+   </group>
+ 
+   <group if="$(eval &quot;'$(var behavior_path_planner_type)' == 'path_generator'&quot;)">

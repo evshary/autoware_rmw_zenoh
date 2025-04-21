@@ -5,7 +5,7 @@ source /opt/ros/humble/setup.bash
 if [ ! -d "autoware_ws" ]; then
     git clone https://github.com/autowarefoundation/autoware.git autoware_ws
     cd autoware_ws || exit
-    git checkout d09350cf41242b86dce13f100267cb197cbf41f4 # 2025-02-26
+    git checkout 3683fb57be71ffd26f2642632d2abb773841d4d6 # 0.43.1 (2025-04-01)
     mkdir src
     vcs import src < autoware.repos
     rosdep update
@@ -19,7 +19,7 @@ if [ ! -d "autoware_ws" ]; then
     # Related issues:
     # - https://github.com/ros2/rmw_zenoh/issues/608
     # - https://github.com/ros2/rclcpp/issues/2820
-    cd autoware_ws/src/universe/autoware.universe || exit
+    cd autoware_ws/src/universe/autoware_universe || exit
     git apply ../../../../patch/thread_limit.patch
     cd - || exit
 fi
