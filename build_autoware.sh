@@ -5,7 +5,7 @@ source /opt/ros/humble/setup.bash
 if [ ! -d "autoware" ]; then
     git clone https://github.com/autowarefoundation/autoware.git
     cd autoware || exit
-    git checkout d09350cf41242b86dce13f100267cb197cbf41f4
+    git checkout d09350cf41242b86dce13f100267cb197cbf41f4 # 2025-02-26
     mkdir src
     vcs import src < autoware.repos
     rosdep update
