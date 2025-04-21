@@ -1,7 +1,3 @@
-# Autoware
-autoware
-*.log
-
 # Rust
 target
 
@@ -18,6 +14,9 @@ install
 build
 log
 
-# Zenoh
-rmw_zenoh
-zenoh_log
+# Log
+*.log
+*_log
+
+# Workspace
+*_ws
