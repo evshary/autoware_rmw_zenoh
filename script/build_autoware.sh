@@ -21,7 +21,7 @@ if [ ! -d "autoware_ws" ]; then
     # - https://github.com/ros2/rclcpp/issues/2820
     cd autoware_ws/src/universe/autoware.universe || exit
     git apply ../../../../patch/thread_limit.patch
-    cd ../../../.. || exit
+    cd - || exit
 fi
 
 cd autoware_ws || exit
