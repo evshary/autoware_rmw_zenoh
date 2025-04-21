@@ -29,6 +29,6 @@ repos:
       # Support shellcheck
       - id: shellcheck
         name: Run Shellcheck
-        entry: bash -c 'find . -name "*.sh" -not -path "./autoware/*" -print0 | xargs -0 shellcheck -e SC1091'
+        entry: bash -c 'find . -name "*.sh" -not -path "./autoware/*" -not -path "./rmw_zenoh/*" -print0 | xargs -0 shellcheck -e SC1091'
         language: system
         types: [shell]
