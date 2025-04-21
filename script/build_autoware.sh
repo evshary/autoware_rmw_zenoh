@@ -2,9 +2,9 @@
 
 source /opt/ros/humble/setup.bash
 
-if [ ! -d "autoware" ]; then
-    git clone https://github.com/autowarefoundation/autoware.git
-    cd autoware || exit
+if [ ! -d "autoware_ws" ]; then
+    git clone https://github.com/autowarefoundation/autoware.git autoware_ws
+    cd autoware_ws || exit
     git checkout d09350cf41242b86dce13f100267cb197cbf41f4 # 2025-02-26
     mkdir src
     vcs import src < autoware.repos
@@ -19,12 +19,12 @@ if [ ! -d "autoware" ]; then
     # Related issues:
     # - https://github.com/ros2/rmw_zenoh/issues/608
     # - https://github.com/ros2/rclcpp/issues/2820
-    cd autoware/src/universe/autoware.universe || exit
+    cd autoware_ws/src/universe/autoware.universe || exit
     git apply ../../../../patch/thread_limit.patch
-    cd ../../.. || exit
+    cd ../../../.. || exit
 fi
 
-cd autoware || exit
+cd autoware_ws || exit
 # Default build
 colcon build --symlink-install
 # Release build

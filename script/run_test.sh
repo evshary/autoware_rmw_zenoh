@@ -2,9 +2,9 @@
 
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
 source /opt/ros/humble/setup.bash
-source autoware/install/setup.bash
-source rmw_zenoh/install/setup.bash
-cd autoware || exit
+source autoware_ws/install/setup.bash
+source rmw_zenoh_ws/install/setup.bash
+cd autoware_ws || exit
 
 #colcon test
 # Run test sequentially
@@ -17,4 +17,4 @@ colcon test --executor sequential --event-handlers console_direct+
 cd - || exit
 
 # Collect result
-python3 collect_test_result.py autoware
+python3 script/collect_test_result.py autoware_ws

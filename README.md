@@ -7,7 +7,7 @@ Show how to run Autoware with rmw_zenoh.
 * Install prerequisites
 
 ```shell
-./prerequisite.sh
+./script/prerequisite.sh
 ```
 
 * Install pre-commit
@@ -26,31 +26,31 @@ pre-commit install --install-hooks
   * Refer to [the official tutorial](https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/)
 
 ```shell
-./build_autoware.sh
+./script/build_autoware.sh
 ```
 
 * Build rmw_zenoh
 
 ```shell
-./build_zenoh.sh
+./script/build_zenoh.sh
 ```
 
 * Run Autoware
 
 ```shell
 # Run Zenohd first
-./run_zenohd.sh
+./script/run_zenohd.sh
 # Run Autoware
-./run_autoware.sh
+./script/run_autoware.sh
 # Run Rviz
-./run_rviz2.sh
+./script/run_rviz2.sh
 ```
 
 * Run test
 
 ```shell
 # Run Zenohd first
-./run_zenohd.sh
+./script/run_zenohd.sh
 # Run the test
-./run_test.sh
+./script/run_test.sh
 ```
