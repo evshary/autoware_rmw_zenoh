@@ -3,6 +3,7 @@
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
 source /opt/ros/humble/setup.bash
 source autoware/install/setup.bash
+source rmw_zenoh/install/setup.bash
 cd autoware || exit
 
 #colcon test
