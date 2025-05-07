@@ -54,3 +54,35 @@ pre-commit install --install-hooks
 # Run the test
 ./script/run_test.sh
 ```
+
+## Build and Use CARET
+
+[CARET](https://github.com/tier4/caret) (Chain-Aware ROS Evaluation Tool) is a performance analysis tool for ROS 2 applications.
+
+* Build CARET
+
+```shell
+./script/build_caret.sh
+```
+
+* Build Autoware with CARET
+
+```shell
+./script/build_autoware_caret.sh
+```
+
+* Run and Record with CARET
+
+```shell
+./script/run_autoware_caret.sh
+```
+
+* Visualize CARET Trace Data
+
+```shell
+# Plot the latest log
+./script/run_caret_plot.sh
+
+# Or specify a custom log directory
+./script/run_caret_plot.sh <path-to-caret-log>
+```
