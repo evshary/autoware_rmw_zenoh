@@ -86,3 +86,8 @@ pre-commit install --install-hooks
 # Or specify a custom log directory
 ./script/run_caret_plot.sh <path-to-caret-log>
 ```
+
+## Note
+
+If you can't build Autoware, this might be caused by the package conflicts.
+Try to remove all the binary packages related to Autoware: `sudo apt remove "ros-humble-autoware-*"`
