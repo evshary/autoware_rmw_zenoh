@@ -90,15 +90,15 @@ pre-commit install --install-hooks
 ## Demo
 
 1. **[Basic Route Execution](https://youtu.be/1MbIKINI6XI)**
-   - Runs `planning_simulator` to perform simple route planning and motion.
+   * Runs `planning_simulator` to perform simple route planning and motion.
 
 2. **[Localization + Lidar + Perception](https://youtu.be/as9BZzZuQEg)**
-   - Runs `logging_simulator` to perform localization, perception and displays lidar pointclouds.
-   - A [public rosbag](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/rosbag-replay-simulation/) is used for this demo.
+   * Runs `logging_simulator` to perform localization, perception and displays lidar pointclouds.
+   * A [public rosbag](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/rosbag-replay-simulation/) is used for this demo.
 
 3. **[Manual Localization + Lidar + Camera](https://youtu.be/SYLeAmDG_hM)**
-   - Runs `planning_simulator` to visualize both camera images and lidar pointclouds.
-   - A [public rosbag](https://autowarefoundation.github.io/autoware-documentation/main/datasets/) is used, which does not include a lanelet map, so manual pose initialization is used.
+   * Runs `planning_simulator` to visualize both camera images and lidar pointclouds.
+   * A [public rosbag](https://autowarefoundation.github.io/autoware-documentation/main/datasets/) is used, which does not include a lanelet map, so manual pose initialization is used.
 
 ## Note
 
