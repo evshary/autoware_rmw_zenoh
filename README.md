@@ -112,8 +112,6 @@ pre-commit install --install-hooks
 
   [![AWSIM](http://img.youtube.com/vi/cZUzNDo5dig/0.jpg)](https://youtu.be/cZUzNDo5dig "Autoware + AWSIM")
 
-
-
 ## Note
 
 If you can't build Autoware, this might be caused by the package conflicts.
