@@ -106,6 +106,13 @@ pre-commit install --install-hooks
 
   [![Manual Localization + Lidar + Camera](http://img.youtube.com/vi/SYLeAmDG_hM/0.jpg)](https://youtu.be/SYLeAmDG_hM "Manual Localization + Lidar + Camera")
 
+* **AWSIM**
+  * Using Autoware version 0.43.1 and AWSIM 1.5.3.
+  * For AWSIM setup instructions, please refer to the official AWSIM tutorial: [Quick Start Demo](https://autowarefoundation.github.io/AWSIM-Labs/main/GettingStarted/QuickStartDemo/)
+
+  [![AWSIM](http://img.youtube.com/vi/cZUzNDo5dig/0.jpg)](https://youtu.be/cZUzNDo5dig "Autoware + AWSIM")
+
+
 
 ## Note
 
