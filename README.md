@@ -89,16 +89,28 @@ pre-commit install --install-hooks
 
 ## Demo
 
-1. **[Basic Route Execution](https://youtu.be/1MbIKINI6XI)**
-   * Runs `planning_simulator` to perform simple route planning and motion.
+* **Basic Route Execution**
+  * Runs `planning_simulator` to perform simple route planning and motion.
 
-2. **[Localization + Lidar + Perception](https://youtu.be/as9BZzZuQEg)**
-   * Runs `logging_simulator` to perform localization, perception and displays lidar pointclouds.
-   * A [public rosbag](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/rosbag-replay-simulation/) is used for this demo.
+  [![Basic Route Execution](http://img.youtube.com/vi/1MbIKINI6XI/0.jpg)](https://youtu.be/1MbIKINI6XI "Basic Route Execution")
 
-3. **[Manual Localization + Lidar + Camera](https://youtu.be/SYLeAmDG_hM)**
-   * Runs `planning_simulator` to visualize both camera images and lidar pointclouds.
-   * A [public rosbag](https://autowarefoundation.github.io/autoware-documentation/main/datasets/) is used, which does not include a lanelet map, so manual pose initialization is used.
+* **Localization + Lidar + Perception**
+  * Runs `logging_simulator` to perform localization, perception and displays lidar pointclouds.
+  * A [public rosbag](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/rosbag-replay-simulation/) is used for this demo.
+
+  [![Localization + Lidar + Perception](http://img.youtube.com/vi/as9BZzZuQEg/0.jpg)](https://youtu.be/as9BZzZuQEg "Localization + Lidar + Perception")
+
+* **Manual Localization + Lidar + Camera**
+  * Runs `planning_simulator` to visualize both camera images and lidar pointclouds.
+  * A [public rosbag](https://autowarefoundation.github.io/autoware-documentation/main/datasets/) is used, which does not include a lanelet map, so manual pose initialization is used.
+
+  [![Manual Localization + Lidar + Camera](http://img.youtube.com/vi/SYLeAmDG_hM/0.jpg)](https://youtu.be/SYLeAmDG_hM "Manual Localization + Lidar + Camera")
+
+* **AWSIM**
+  * Using Autoware version 0.43.1 and AWSIM 1.5.3.
+  * For AWSIM setup instructions, please refer to the official AWSIM tutorial: [Quick Start Demo](https://autowarefoundation.github.io/AWSIM-Labs/main/GettingStarted/QuickStartDemo/)
+
+  [![AWSIM](http://img.youtube.com/vi/cZUzNDo5dig/0.jpg)](https://youtu.be/cZUzNDo5dig "Autoware + AWSIM")
 
 ## Note
 
