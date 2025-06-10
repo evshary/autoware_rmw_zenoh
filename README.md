@@ -2,6 +2,10 @@
 
 Show how to run Autoware with rmw_zenoh.
 
+* Autoware version: 0.43.1
+  * The version is fixed by using container
+* rmw_zenoh version: The latest Humble
+
 ## Usage
 
 * Install prerequisites
